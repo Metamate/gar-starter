@@ -50,9 +50,9 @@ To give the project your game's name (e.g. `Frogger`):
 
 ## Adding GMDCore
 
-To reuse the course's core library, copy the `GMDCore` folder from one of the course
-repositories next to `MyGame`, add it to the `.slnx`, and reference it from your game's
-`.csproj`:
+To reuse the course's core library, copy the `GMDCore` folder of one of the games in
+[gar-games](https://github.com/Metamate/gar-games) (usually the latest game you've covered)
+next to `MyGame`, add it to the `.slnx`, and reference it from your game's `.csproj`:
 
 ```xml
 <ItemGroup>
