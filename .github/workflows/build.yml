@@ -1,0 +1,21 @@
+name: Build
+
+# Builds the game (and its content) on every push and pull request, so a broken build
+# shows up on GitHub right away.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Windows, because some fonts (e.g. Arial) come from the system.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet build
