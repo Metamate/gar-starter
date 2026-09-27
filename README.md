@@ -61,14 +61,13 @@ can reuse it. It starts empty. The game references it in `MyGame.csproj`:
 <ProjectReference Include="..\GMDCore\GMDCore.csproj" />
 ```
 
-The reference goes one way: the game knows the library, and the library never knows the
-game. So nothing in `GMDCore` may use a class from `MyGame`.
+The reference only goes one way. The game uses `GMDCore`, but nothing in `GMDCore` may use
+a class from `MyGame`; otherwise no other game could reuse it.
 
 In the course you build `GMDCore` up session by session. To use the course's version in
 your own game, replace this `GMDCore` folder with the one from a game in
 [gar-games](https://github.com/Metamate/gar-games), usually the latest game you've covered.
-Nothing else needs to change. If your game doesn't use it, leave it empty: an empty library
-costs nothing.
+Nothing else needs to change. If your game doesn't use it, you can leave it empty.
 
 ## Publishing
 
