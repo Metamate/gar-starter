@@ -40,6 +40,9 @@ The builder runs automatically every time the game builds. It already handles `.
 those yourself from `Content/...` at runtime). For any other kind of file, add a rule in
 `Builder.cs`.
 
+If you replace a font's `.ttf`, also save its `.spritefont` (or delete `MyGame/obj`): the
+content builder only rebuilds a font when the `.spritefont` itself changes.
+
 ## Renaming the game
 
 To give the project your game's name (e.g. `Frogger`):
