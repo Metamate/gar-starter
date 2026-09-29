@@ -72,8 +72,9 @@ Nothing else needs to change. If your game doesn't use it, you can leave it empt
 ## Publishing
 
 ```
-dotnet publish MyGame -c Release -r win-x64 --self-contained
+dotnet publish MyGame -c Release -r win-x64 --self-contained -o publish
 ```
 
-Use `osx-arm64` or `linux-x64` for other platforms. The game and its `Content` folder
-end up in `MyGame/bin/Release/net10.0/win-x64/publish`.
+Use `osx-arm64` or `linux-x64` for other platforms. The `publish` folder is the whole game:
+the executable, the libraries next to it and the `Content` folder (the `.exe` alone won't
+start). Zip the folder to share it; git ignores it.
