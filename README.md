@@ -54,7 +54,7 @@ To give the project your game's name (e.g. `Frogger`):
 
 ## GARCore
 
-`GARCore` is a class library: code that isn't specific to one game, kept apart so any game
+`GARCore` is a class library for code that isn't specific to one game, kept apart so any game
 can reuse it. It starts empty. The game references it in `MyGame.csproj`:
 
 ```xml
