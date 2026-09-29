@@ -22,7 +22,7 @@ Open `MyGame.slnx` in Visual Studio or Rider, or the folder in VS Code.
 | Path | What it is |
 | --- | --- |
 | `MyGame/` | Your game. `Game1.cs` is where it starts. |
-| `GMDCore/` | The course's core library: code any game could reuse. Empty to begin with. |
+| `GARCore/` | The course's core library: code any game could reuse. Empty to begin with. |
 | `Content/Assets/` | Your raw assets: images, fonts, sounds, music, data files. |
 | `Content/Builder/Builder.cs` | The rules for how each kind of asset is built. |
 
@@ -52,20 +52,20 @@ To give the project your game's name (e.g. `Frogger`):
 2. Replace `MyGame` with `Frogger` in `MyGame.slnx` (then rename it too), `Program.cs`
    and `Game1.cs`.
 
-## GMDCore
+## GARCore
 
-`GMDCore` is a class library: code that isn't specific to one game, kept apart so any game
+`GARCore` is a class library: code that isn't specific to one game, kept apart so any game
 can reuse it. It starts empty. The game references it in `MyGame.csproj`:
 
 ```xml
-<ProjectReference Include="..\GMDCore\GMDCore.csproj" />
+<ProjectReference Include="..\GARCore\GARCore.csproj" />
 ```
 
-The reference only goes one way. The game uses `GMDCore`, but nothing in `GMDCore` may use
+The reference only goes one way. The game uses `GARCore`, but nothing in `GARCore` may use
 a class from `MyGame`; otherwise no other game could reuse it.
 
-In the course you build `GMDCore` up session by session. To use the course's version in
-your own game, replace this `GMDCore` folder with the one from a game in
+In the course you build `GARCore` up session by session. To use the course's version in
+your own game, replace this `GARCore` folder with the one from a game in
 [gar-games](https://github.com/Metamate/gar-games), usually the latest game you've covered.
 Nothing else needs to change. If your game doesn't use it, you can leave it empty.
 
